@@ -31,7 +31,7 @@ app.get('/players/:id', (req, res) => {
     return res.status(200).send(match)
 });
 
-app.post('/players', (req, res) => {
+app.post('/players/new', (req, res) => {
     const newPlay  = req.body;
     
     const match = app.locals.players.find(player => {
