@@ -24,7 +24,7 @@ app.get('/players', (req, res) => {
 
 app.get('/players/:id', (req, res) => {
     const { id }  = req.params;
-    const match = app.locals.players.filter(player => player.id === id);
+    const match = app.locals.players.filter(player => player.id == id);
 
     if (!match) return res.status(404).send({message: `No player found with an id of ${id}`});
 
@@ -47,3 +47,6 @@ app.post('/players/new', (req, res) => {
     res.status(201).send(req.body)
 });
 
+app.patch('/players/:id', (req,res) => {
+    
+})
