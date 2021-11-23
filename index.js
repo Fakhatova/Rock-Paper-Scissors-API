@@ -8,8 +8,8 @@ app.use(express.json());// midleware to apply for request
 app.locals.players = [
     {
     "id": 1,
-    "name": "corona",
-    "wins": 1,
+    "name": "Fara",
+    "wins": 0,
     "losts": 0
 }
 ]
@@ -24,21 +24,25 @@ app.get('/players', (req, res) => {
 
 app.get('/players/:id', (req, res) => {
     const { id }  = req.params;
-    const match = app.locals.players.find(idea => idea.id == id);
+    const match = app.locals.players.filter(player => player.id === id);
 
-    if (!match) return res.status(404).send({message: `No idea found with an id of ${id}`});
+    if (!match) return res.status(404).send({message: `No player found with an id of ${id}`});
 
-    res.status(200).send(match)
+    return res.status(200).send(match)
 });
 
 app.post('/players', (req, res) => {
     const newPlay  = req.body;
+    
+    const match = app.locals.players.find(player => {
 
-    if(!newPlay) {
-        res.status(422).send({message: 'Missing required parameter'})
+    if(player.id === newPlay.id) {
+        return res.status(422).send({message: `User with id  ${newPlay.id} is already registered`})
     }
+    
+    })
 
-    app.locals.players = [ ...app.locals.players, newPlay]
+    app.locals.players = [...app.locals.players, newPlay]
 
     res.status(201).send(req.body)
 });
