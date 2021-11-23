@@ -47,6 +47,17 @@ app.post('/players/new', (req, res) => {
     res.status(201).send(req.body)
 });
 
-app.patch('/players/:id', (req,res) => {
-    
+app.patch('/players/:id', (req, res) => {
+    const {id} = req.params
+    const {wins, losts} = req.body;
+
+    const matchUpdate = app.locals.players.find(player => player.id == id)
+
+    if(matchUpdate.wins !== wins) {
+        matchUpdate.wins = wins
+    }else if(matchUpdate.losts !== losts) {
+        matchUpdate.losts = losts 
+    }
+
+    res.send(matchUpdate); // Returns modified information back to user
 })
