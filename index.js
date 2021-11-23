@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 300;
 
 
 app.use(express.json());// midleware to apply for request 
@@ -14,8 +14,10 @@ app.locals.players = [
 }
 ]
 
+
+
 app.listen(
-    PORT, () => console.log('API running')
+    PORT, () => console.log(`App listening on http://localhost:${PORT}`)
 );
 
 app.get('/players', (req, res) => {
