@@ -1,5 +1,10 @@
-const app = require('express')();
+const express = require('express')
+const app = express();
 const PORT = 8080;
+
+
+app.use(express.json());
+
 
 app.listen(
     PORT, () => console.log('API running')
@@ -7,12 +12,22 @@ app.listen(
 
 app.get('/endpoint', (req, res) => {
         res.status(200).send({
-            id:Date.now().toString(),
+            id: 1,
             name: 'unknown'
         })
 });
 
-app.post('/tshirt/:id', (req, res) => {
+app.post('/endpoint/:id', (req, res) => {
     const { id }  = req.params;
-    const { logo } = req.body;
+    const { name } = req.body;
+
+    if(!name) {
+        res.status(418).send({message: 'Missing logo for post request body'})
+    }
+
+    res.send({
+        id: id,
+        name: name
+    })
 });
+
