@@ -48,9 +48,11 @@ The Rock-Paper-Scissors backend is built with a `Express.js` framework that stor
 ### Endpoint Documentation
 Domain: `https://rock-papper-scissors-api.herokuapp.com/`
 
-Request:
-- Get all registered players:
+#### Get all registered players:
+
+
 GET `https://rock-papper-scissors-api.herokuapp.com/players`
+
 
 Response:
   
@@ -64,8 +66,12 @@ Response:
     }
   ]
 ```
-- Get Spicific player by ID:
+
+#### Get Spicific player by ID:
+
+
 GET `https://rock-papper-scissors-api.herokuapp.com/players/:id`
+
 
 Response:
 ```js
@@ -78,8 +84,8 @@ Response:
     }
   ]
 ```
-- POST new player/register:
-Request:
+#### POST new player/register:
+
 POST `https://rock-papper-scissors-api.herokuapp.com/players/new`
 
 Sample request:
@@ -111,7 +117,9 @@ Response:
   ]
 ```
 
-- Update score:
+#### Update score:
+
+
 PATCH `https://rock-papper-scissors-api.herokuapp.com/players/:id`
 
 Sample request:
