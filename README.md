@@ -34,7 +34,7 @@ The Rock-Paper-Scissors backend is built with a `Express.js` framework that stor
 1. Fork this repo
 2. Clone your new repo:
   ```sh
-  git clone https://github.com/Fakhatova/Rock-Papper-Scissors-API.git
+  git clonehttps://github.com/Fakhatova/Rock-Paper-Scissors-API.git
   ```
 3. Install dependencies:
   ```sh
