@@ -20,6 +20,10 @@ app.listen(
     PORT, () => console.log(`App listening on http://localhost:${PORT}`)
 );
 
+app.get('/', (req,res) => {
+    res.send('Hello, and welcome... Please add endpoint /players  - to your URL to be able request data from this API')
+})
+
 app.get('/players', (req, res) => {
         res.status(200).send(app.locals.players);
 });
