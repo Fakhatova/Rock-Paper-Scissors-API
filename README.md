@@ -11,7 +11,6 @@
   <a href="#about-the-project">About The Project</a> •
   <a href="#installation">Installation</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#database-schema">Database Schema</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#acknowledgements">Acknowledgements</a>
 </p>
@@ -44,3 +43,8 @@ The Rock-Paper-Scissors backend is built with a `Express.js` framework that stor
 4. Run server localy:
   ```sh
   $ node .
+  ```
+## How To Use
+
+### Endpoint Documentation
+Domain: `https://rock-papper-scissors-api.herokuapp.com/`
