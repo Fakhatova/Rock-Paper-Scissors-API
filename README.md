@@ -12,7 +12,6 @@
   <a href="#installation">Installation</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#contributing">Contributing</a> •
-  <a href="#acknowledgements">Acknowledgements</a>
 </p>
 
 
