@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const PORT = process.env.PORT || 300;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());// midleware to apply for request 
@@ -46,7 +46,7 @@ app.post('/players/new', (req, res) => {
 
     app.locals.players = [...app.locals.players, newPlay]
 
-    res.status(201).send(req.body)
+    res.status(201).send(newPlay)
 });
 
 app.patch('/players/:id', (req, res) => {
