@@ -48,3 +48,105 @@ The Rock-Paper-Scissors backend is built with a `Express.js` framework that stor
 
 ### Endpoint Documentation
 Domain: `https://rock-papper-scissors-api.herokuapp.com/`
+
+Request:
+- Get all registered players:
+GET `https://rock-papper-scissors-api.herokuapp.com/players`
+
+Response:
+  
+```js
+  [
+    { 
+       id: 1, 
+       name: 'Fara', 
+       wins: 0, 
+       losts: 0 
+    }
+  ]
+```
+- Get Spicific player by ID:
+GET `https://rock-papper-scissors-api.herokuapp.com/players/:id`
+
+Response:
+```js
+  [
+    { 
+       id: 1, 
+       name: 'Fara', 
+       wins: 0, 
+       losts: 0 
+    }
+  ]
+```
+- POST new player/register:
+Request:
+POST `https://rock-papper-scissors-api.herokuapp.com/players/new`
+
+Sample request:
+
+```js
+{
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    id: 123759,
+    title: 'string',
+    wins:0,
+    losts:0
+  })
+}
+```
+
+Response:
+
+```js
+  [
+    { 
+       id: 123759, 
+       name: 'string', 
+       wins: 0, 
+       losts: 0 
+    }
+  ]
+```
+
+- Update score:
+PATCH `https://rock-papper-scissors-api.herokuapp.com/players/:id`
+
+Sample request:
+
+```js
+{
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    id: 123759,
+    title: 'string',
+    wins:1,
+    losts:0
+  })
+}
+```
+
+Response:
+
+```js
+  [
+    { 
+       id: 123759, 
+       name: 'string', 
+       wins: 1, 
+       losts: 0 
+    }
+  ]
+```
+
+## Contributing
+  **Fara Akhatova**
+- [GitHub](https://github.com/Fakhatova)
+- [LinkedIn](https://www.linkedin.com/in/fara-akhatova/)
+
+
