@@ -35,17 +35,12 @@ The Rock-Paper-Scissors backend is built with a `Express.js` framework that stor
 1. Fork this repo
 2. Clone your new repo:
   ```sh
-  git clone https://github.com/MIBFB-COLLAB/message_in_a_bottle_backend.git
+  git clone https://github.com/Fakhatova/Rock-Papper-Scissors-API.git
   ```
-3. Create and Invoke your virtual environment:
-  ```sh
-  python3 -m virtualenv venv
-  source venv/bin/activate
-  ```
-4. Install dependencies:
+3. Install dependencies:
   ```sh
   $ npm i
   ```
-5. Run server localy:
+4. Run server localy:
   ```sh
   $ node .
